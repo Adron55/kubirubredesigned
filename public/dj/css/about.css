@@ -1,0 +1,147 @@
+html { font-size: calc(1em + 1vw) }
+@font-face{
+  src: url("fonts/rubik/rubiklight.ttf");
+  font-family: "Rubik Medium";
+}
+@font-face{
+  src: url("fonts/rubik/rubikmedium.ttf");
+  font-family: "Rubik Bold";
+}
+@font-face{
+  src: url("fonts/proximanova.ttf");
+  font-family: "Proxima Nova";
+}
+.about{
+    background-image: url("backgrounds/about.png");
+    height: 100% ;
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  
+ .congrats{
+  background-image: url("backgrounds/signback.png");
+  height: 100% ;
+ background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+ }
+
+ .congrats h1, .congrats p{
+   color: white;
+ }
+.congrats h1{
+  font-size: 6em;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.congrats img{
+  margin-left: -40px;
+}
+.congrats p{
+  font-size: 1.8em;
+ font-weight: 100;
+  font-family: "Rubik Medium"
+}
+.congratsbody{
+  margin-top: 135px;
+}
+.divburger{
+  text-align: right;
+}
+.congrats .boy {
+  width: 40vw;
+}
+.second{
+  height: auto;
+  background: white;
+  margin-top: 20px;
+}
+  .game img{
+    width: 330px;
+  }
+
+  .abouttext{
+    padding-left: 100px;
+    font-size: 20px;
+    padding-right: 100px;
+  }
+
+
+hr{
+  width: 97%; 
+ color: black; 
+ height: 0.5px;
+ background-color:black;
+}
+@media(min-width:1920px){
+ .abouttext{
+  font-size: 26px;
+  margin-top: 50px;
+ }
+
+ 
+}
+@media(max-width:1440PX){
+  .game img {
+    width: 345px;
+}
+.congrats h1 {
+  font-size: 4em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.loginpage{
+  width: 300px;
+}
+.congrats p {
+  font-size: 1.7em;
+  font-weight: 100;
+  font-family: "Rubik Medium";
+}
+.congrats .boy{
+  margin-left: 0px;
+  width: 38vw;
+}
+.second {
+  height: auto;
+  background: white;
+  margin-top: 70px;
+}
+}
+@media(max-width:1360px){
+  .second {
+    height: auto;
+    background: white;
+    margin-top: 100px;
+}
+}
+@media(max-width:1281px){
+  .game img {
+    width: 345px;
+}
+.congrats h1 {
+  font-size: 4em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.loginpage{
+  width: 300px;
+}
+.congrats p {
+  font-size: 1.3em;
+  font-weight: 100;
+  font-family: "Rubik Medium";
+}
+.congrats .boy{
+  margin-left: 0px;
+  width: 38vw;
+}
+.second {
+  height: auto;
+  background: white;
+  margin-top: 70px;
+}
+}

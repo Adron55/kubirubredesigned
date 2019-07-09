@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="227.311" height="61.139" viewBox="0 0 227.311 61.139">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        font-size: 15px;
+        font-family: SourceSansPro-Bold, Source Sans Pro;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 0.5px;
+      }
+    </style>
+  </defs>
+  <g id="Group_2309" data-name="Group 2309" transform="translate(-12.689 -13.706)">
+    <text id="Logo" class="cls-1" transform="translate(83 36)"><tspan x="0" y="0">KubiRub</tspan><tspan x="0" y="21">Company Service</tspan></text>
+    <g id="logo_kub" data-name="logo kub" transform="translate(12.818 13.822)">
+      <line id="Line_6" data-name="Line 6" class="cls-2" x1="28.668" transform="translate(23.163 8.835)"/>
+      <line id="Line_7" data-name="Line 7" class="cls-2" x1="28.668" transform="translate(23.163 37.503)"/>
+      <line id="Line_8" data-name="Line 8" class="cls-2" y1="28.668" transform="translate(23.163 8.835)"/>
+      <line id="Line_9" data-name="Line 9" class="cls-2" y1="28.668" transform="translate(51.831 8.835)"/>
+      <line id="Line_10" data-name="Line 10" class="cls-2" x1="28.668" transform="translate(8.835 23.175)"/>
+      <line id="Line_11" data-name="Line 11" class="cls-2" x1="28.668" transform="translate(8.835 51.831)"/>
+      <line id="Line_12" data-name="Line 12" class="cls-2" y1="28.668" transform="translate(8.835 23.163)"/>
+      <line id="Line_13" data-name="Line 13" class="cls-2" y1="28.668" transform="translate(37.503 23.163)"/>
+      <line id="Line_14" data-name="Line 14" class="cls-2" x1="14.328" y2="14.328" transform="translate(8.799 8.799)"/>
+      <line id="Line_15" data-name="Line 15" class="cls-2" x1="14.328" y2="14.328" transform="translate(37.539 8.799)"/>
+      <line id="Line_16" data-name="Line 16" class="cls-2" x1="14.328" y2="14.328" transform="translate(37.539 37.539)"/>
+      <line id="Line_17" data-name="Line 17" class="cls-2" x1="14.328" y2="14.328" transform="translate(8.799 37.539)"/>
+      <line id="Line_18" data-name="Line 18" class="cls-2" x1="20.266" y1="20.266" transform="translate(40.58 10.073)"/>
+      <line id="Line_19" data-name="Line 19" class="cls-2" x1="20.266" y1="20.266" transform="translate(20.314 30.339)"/>
+      <line id="Line_20" data-name="Line 20" class="cls-2" y1="20.266" x2="20.266" transform="translate(20.314 10.073)"/>
+      <line id="Line_21" data-name="Line 21" class="cls-2" y1="20.266" x2="20.266" transform="translate(40.58 30.339)"/>
+      <line id="Line_22" data-name="Line 22" class="cls-2" x1="20.266" y1="20.266" transform="translate(20.314 10.073)"/>
+      <line id="Line_23" data-name="Line 23" class="cls-2" x1="20.278" y1="20.266" transform="translate(0.048 30.339)"/>
+      <line id="Line_24" data-name="Line 24" class="cls-2" y1="20.266" x2="20.278" transform="translate(0.048 10.073)"/>
+      <line id="Line_25" data-name="Line 25" class="cls-2" y1="20.266" x2="20.266" transform="translate(20.314 30.339)"/>
+      <line id="Line_26" data-name="Line 26" class="cls-2" x1="20.266" transform="translate(20.314 10.013)"/>
+      <line id="Line_27" data-name="Line 27" class="cls-2" x1="20.266" transform="translate(40.64 30.339)"/>
+      <line id="Line_28" data-name="Line 28" class="cls-2" x1="20.266" transform="translate(20.314 50.653)"/>
+      <line id="Line_29" data-name="Line 29" class="cls-2" x1="20.266" transform="translate(0 30.339)"/>
+      <line id="Line_30" data-name="Line 30" class="cls-2" y1="28.656" transform="translate(51.951 23.055)"/>
+      <line id="Line_31" data-name="Line 31" class="cls-2" y1="28.656" transform="translate(23.283 23.055)"/>
+      <line id="Line_32" data-name="Line 32" class="cls-2" x2="28.668" transform="translate(23.283 23.055)"/>
+      <line id="Line_33" data-name="Line 33" class="cls-2" x2="28.668" transform="translate(23.283 51.71)"/>
+      <line id="Line_34" data-name="Line 34" class="cls-2" y1="28.668" transform="translate(37.611 8.715)"/>
+      <line id="Line_35" data-name="Line 35" class="cls-2" y1="28.668" transform="translate(8.955 8.715)"/>
+      <line id="Line_36" data-name="Line 36" class="cls-2" x2="28.668" transform="translate(8.955 8.727)"/>
+      <line id="Line_37" data-name="Line 37" class="cls-2" x2="28.668" transform="translate(8.955 37.382)"/>
+      <line id="Line_38" data-name="Line 38" class="cls-2" x1="14.328" y1="14.328" transform="translate(37.659 8.679)"/>
+      <line id="Line_39" data-name="Line 39" class="cls-2" x1="14.328" y1="14.328" transform="translate(37.659 37.419)"/>
+      <line id="Line_40" data-name="Line 40" class="cls-2" x1="14.328" y1="14.328" transform="translate(8.919 37.419)"/>
+      <line id="Line_41" data-name="Line 41" class="cls-2" x1="14.328" y1="14.328" transform="translate(8.919 8.679)"/>
+      <line id="Line_42" data-name="Line 42" class="cls-2" y1="20.266" x2="20.266" transform="translate(30.447 40.58)"/>
+      <line id="Line_43" data-name="Line 43" class="cls-2" y1="20.278" x2="20.278" transform="translate(10.181 20.314)"/>
+      <line id="Line_44" data-name="Line 44" class="cls-2" x2="20.266" y2="20.278" transform="translate(30.447 20.314)"/>
+      <line id="Line_45" data-name="Line 45" class="cls-2" x2="20.278" y2="20.266" transform="translate(10.181 40.58)"/>
+      <line id="Line_46" data-name="Line 46" class="cls-2" y1="20.278" x2="20.266" transform="translate(30.447 20.314)"/>
+      <line id="Line_47" data-name="Line 47" class="cls-2" y1="20.266" x2="20.278" transform="translate(10.181 0.06)"/>
+      <line id="Line_48" data-name="Line 48" class="cls-2" x2="20.266" y2="20.266" transform="translate(30.447 0.06)"/>
+      <line id="Line_49" data-name="Line 49" class="cls-2" x2="20.278" y2="20.278" transform="translate(10.181 20.314)"/>
+      <line id="Line_50" data-name="Line 50" class="cls-2" y1="20.254" transform="translate(50.773 20.326)"/>
+      <line id="Line_51" data-name="Line 51" class="cls-2" y1="20.266" transform="translate(30.447 40.64)"/>
+      <line id="Line_52" data-name="Line 52" class="cls-2" y1="20.254" transform="translate(10.133 20.326)"/>
+      <line id="Line_53" data-name="Line 53" class="cls-2" y1="20.266" transform="translate(30.447)"/>
+      <circle id="Ellipse_9" data-name="Ellipse 9" class="cls-3" cx="4.892" cy="4.892" r="4.892" transform="translate(25.555 25.567)"/>
+    </g>
+  </g>
+</svg>
