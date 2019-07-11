@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
       id="bootstrap-css">
-<link rel="stylesheet" href="{{asset('dj-dashboard')}}">
+<link rel="stylesheet" href="{{asset('dj-dash')}}">
 <link rel="stylesheet" href="{{asset('dj/bootstrap/css/bootstrap.min.css')}}">
 <link rel="stylesheet" type="text/css"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>

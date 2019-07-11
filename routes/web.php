@@ -32,6 +32,8 @@ Route::get('/team', function () {
     return view('team');
 })->name('team');
 
+//Company
+Route::get('/dashboard/home','HomeController@dashhome')->name('dashboard.home');
 
 
 Route::get('/', 'MainController@index')->name('/');
@@ -57,7 +59,7 @@ Route::get('/dashboard', function(){
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('/edit', 'HomeController@edit');
+Route::get('/edit', 'HomeController@edit')->name('edit');
 Route::post('/home/save', 'HomeController@companyUpdate')->name('companyUpdate');
 
 //Route::post('/loginuser', 'ApiUserController@loginweb')->name('homeforuser');

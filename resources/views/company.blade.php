@@ -7,7 +7,7 @@
 
 @stop
 
-    @section('nav')
+@section('nav')
         <section class="sign">
             <div class="container-fluid">
     @include('includes/header')
@@ -29,6 +29,8 @@
                         </div>
                     </div>
                 </div>
+
+{{--                Footer--}}
                 <div class="signfooter">
                     <hr class="signfoot">
 
@@ -46,6 +48,7 @@
                     </div>
                 </div>
 
+{{--                Footer end--}}
             </div>
         </section>
 @stop

@@ -114,7 +114,7 @@ class MainController extends Controller
         $countries = Country::all();
         $positions = Position::all();
         $sectors = BusinessSector::all();
-        return view("companyRegistration", compact('countries', 'positions', 'sectors'));
+        return view("companyRegister", compact('countries', 'positions', 'sectors'));
     }
 
 }

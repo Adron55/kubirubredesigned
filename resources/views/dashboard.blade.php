@@ -1,170 +1,28 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-{{--    <link rel="icon" type="image/png" href="assets/img/favicon.ico">--}}
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-    <link href="{{asset('dj/css/bootstrap.min.css')}}" rel="stylesheet" />
-    <link href="{{asset('dj/css/animate.min.css')}}" rel="stylesheet"/>
-    <link href="{{asset('dj/css/main.css')}}" rel="stylesheet"/>
-{{--    <link href="{!! asset('theme/vendor/bootstrap/css/bootstrap.min.css') !!}" rel="stylesheet">--}}
-{{--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">--}}
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-{{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
+@extends('layouts.default')
+@section('head')
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <meta name="viewport" content="width=device-width" />
+        <link href="{{asset('dj-dash/css/bootstrap.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('dj-dash/css/animate.min.css')}}" rel="stylesheet"/>
+        <link href="{{asset('dj-dash/css/main.css')}}" rel="stylesheet"/>
+        {{--    <link href="{!! asset('theme/vendor/bootstrap/css/bootstrap.min.css') !!}" rel="stylesheet">--}}
+        {{--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">--}}
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        {{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
 
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="{{asset('dj/css/pe-icon-7-stroke.css')}}" rel="stylesheet" />
-</head>
-<body>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+        <link href="{{asset('dj-dash/css/pe-icon-7-stroke.css')}}" rel="stylesheet" />
+
+@stop
+
+@section('content')
 <div class="wrapper">
-    <div class="sidebar" data-image="Menu.png">
-        <div class="sidebar-wrapper">
-            <div class="logo">
-                <img  src="{{asset('dj-dashboard')}}" alt="">
-            </div>
-            <ul class="nav">
-                <li class="active">
-                    <a href="dashboard.html">
-                        <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="user.html">
-                        <i class="pe-7s-user"></i>
-                        <p>Home</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="table.html">
-                        <i class="pe-7s-note2"></i>
-                        <p>Inbox</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="typography.html">
-                        <i class="pe-7s-news-paper"></i>
-                        <p>Discounts</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="maps.html">
-                        <i class="pe-7s-map-marker"></i>
-                        <p>Feedbacks</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="notifications.html">
-                        <i class="pe-7s-bell"></i>
-                        <p>Customers</p>
-                    </a>
-                </li>
-                <li class="active-pro">
-                    <a href="upgrade.html">
-                        <i class="pe-7s-rocket"></i>
-                        <p>Chat Room</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="pe-7s-note2"></i>
-                        <p>Calendar</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="pe-7s-note2"></i>
-                        <p>Help Center</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="pe-7s-note2"></i>
-                        <p>Settings</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    @include('includes.sidebar')
     <div class="main-panel">
-        <nav class="navbar navbar-default navbar-fixed">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">User</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-left">
-
-
-                        <li>
-
-                        </li>
-                    </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <form id="content">
-                            <input type="text" name="input" class="input inputsearch">
-                            <button type="reset" class="search"></button>
-                        </form>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-dashboard"></i>
-                                <p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-globe"></i>
-                                <b class="caret hidden-sm hidden-xs"></b>
-                                <span class="notification hidden-sm hidden-xs">5</span>
-                                <p class="hidden-lg hidden-md">
-                                    5 Notifications
-                                    <b class="caret"></b>
-                                </p>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <p>
-                                    Jamal Aghayev
-                                    <b class="caret"></b>
-                                </p>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Log Out</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img class="userpic" src="{{asset('dj/img/jamal.png')}}" alt="">
-                            </a>
-                        </li>
-                        <li class="separator hidden-lg hidden-md"></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        @include('includes.dashboard-header')
         <div class="content">
             <div class="container-fluid">
                 <div class="col-lg-4 col-sm-8">
@@ -176,7 +34,7 @@
                                     <h4 class="card-title">246K</h4>
                                 </div>
                                 <div class="col-md-5">
-                                    <img class="blue" src="{{asset('dj/img/blue.png')}}" alt="">
+                                    <img class="blue" src="{{asset('dj-dash/img/blue.png')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -191,7 +49,7 @@
                                     <h4 class="card-title">2453</h4>
                                 </div>
                                 <div class="col-md-5">
-                                    <img class="blue" src="{{asset('dj/img/purple.png')}}" alt="">
+                                    <img class="blue" src="{{asset('dj-dash/img/purple.png')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -206,7 +64,7 @@
                                     <h4 class="card-title">$39K</h4>
                                 </div>
                                 <div class="col-md-5">
-                                    <img class="blue" src="{{asset('dj/img/green.png')}}" alt="">
+                                    <img class="blue" src="{{asset('dj-dash/img/green.png')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -286,7 +144,7 @@
                                     <a href="#">Show All List</a>
                                 </div>
                             </div>
-                            <img src="{{asset('dj/img/Map.svg')}}" class="card-img-top" alt="...">
+                            <img src="{{asset('dj-dash/img/Map.svg')}}" class="card-img-top" alt="...">
                             <table class="table table-hover table-striped">
                                 <tbody>
                                 <tr>
@@ -339,22 +197,22 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td><img src="{{asset('dj-dashboard')}}" alt=""><p  class="product">Women’s Vintage Peacoat</p></td>
+                                        <td><img src="{{asset('dj-dash/img/1product.png')}}" alt=""><p  class="product">Women’s Vintage Peacoat</p></td>
                                         <td class="aviability">Niger</td>
                                         <td class="city">Oud-Turnhout</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="{{asset('dj-dashboard')}}" alt=""><p class="product">Women’s Oatmeal Sweater</p></td>
+                                        <td><img src="{{asset('dj-dash/img/2product.png')}}" alt=""><p class="product">Women’s Oatmeal Sweater</p></td>
                                         <td class="aviability"> Curaçao</td>
                                         <td class="city">Sinaai-Waas</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="{{asset('dj/img/3product.png')}}" alt=""><p class="product">Women’s Denim Shirt</p></td>
+                                        <td><img src="{{asset('dj-dash/img/3product.png')}}" alt=""><p class="product">Women’s Denim Shirt</p></td>
                                         <td class="aviability">Netherlands</td>
                                         <td class="city">Baileux</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="{{asset('dj/img/4product.png')}}" alt=""><p class="product">Women’s Vintage Peacoat</p></td>
+                                        <td><img src="{{asset('dj-dash/img/4product.png')}}" alt=""><p class="product">Women’s Vintage Peacoat</p></td>
                                         <td class="aviability">Korea, South</td>
                                         <td class="city">Overland Park</td>
                                     </tr>
@@ -412,10 +270,10 @@
         </div>
     </div>
 </div>
-<script src="{{asset('dj/js/jquery.3.2.1.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('dj/js/bootstrap.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('dj/js/bootstrap-notify.js')}}"></script>
-</body>
+@stop
 
-</html>
-
+@section('scripts')
+<script src="{{asset('dj-dash/js/jquery.3.2.1.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('dj-dash/js/bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('dj-dash/js/bootstrap-notify.js')}}"></script>
+@stop

@@ -37,7 +37,25 @@ class HomeController extends Controller
         $sectors = BusinessSector::all();
         $countries = Country::all();
         if ($info->status == 2) {
-            return view("oldDesign/home" , compact('info', 'companies', 'positions', 'countries', 'sectors'));
+//            return $info;
+            return view("dashboard" , compact('info', 'companies', 'positions', 'countries', 'sectors'));
+        } else {
+            return redirect('/');
+        }
+
+//        return view('home');
+    }
+    public function dashhome(Request $request)
+    {
+        $user =User::where('id',Auth::id())->first();
+        $info = User::where('uuid', $user->uuid)->first();
+        $companies = CompanyInfo::where('user_id', $info->id)->first();
+        $positions = Position::all();
+        $sectors = BusinessSector::all();
+        $countries = Country::all();
+        if ($info->status == 2) {
+//            return $info;
+            return view("dashboard-home" , compact('info', 'companies', 'positions', 'countries', 'sectors'));
         } else {
             return redirect('/');
         }
@@ -45,26 +63,28 @@ class HomeController extends Controller
 //        return view('home');
     }
 
+
     public function edit(User $user){
         $user =User::where('id',Auth::id())->first();
         $companies = CompanyInfo::where('user_id', $user->id)->first();
         $positions = Position::all();
         $sectors = BusinessSector::all();
         $countries = Country::all();
-        return view('oldDesign/edit', compact('info', 'companies', 'positions', 'countries', 'sectors','user'));
+        return view('companyedit', compact('info', 'companies', 'positions', 'countries', 'sectors','user'));
     }
     public function companyUpdate(Request $request)
     {
         $validatedData = $request->validate([
-            'fname' =>'required|min:3',
-            'sname' => 'required',
+            'fullname' =>'required',
             'mail' =>'required|email',
             'city' =>'required',
             'cname' =>'required',
             'pname' => 'required',
             'phone' => 'required',
+            'website' =>'required',
+            'cmail' =>'required',
             'myPhoto' => ['required',Rule::dimensions()->maxWidth(140)->maxHeight(140)],
-            'mission' => 'required'
+//            'mission' => 'required'
         ]);
         $user =User::where('id',Auth::id())->first();
         $info = User::where('uuid', $user->uuid)->first();

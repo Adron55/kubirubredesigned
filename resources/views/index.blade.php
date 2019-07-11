@@ -343,7 +343,7 @@
     </div>
 </section>
 
-<section class="tag" style="background-color:black;">
+<section class="tag hometag" style="background-color:black;">
     <div class="container-fluid">
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="basic">
