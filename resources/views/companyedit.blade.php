@@ -18,7 +18,7 @@
 
 
 
-                            <form class="reg" method="POST" action="{{ route('companyUpdate') }}" enctype="multipart/form-data">
+                            <form class="reg" method="POST" action="{{ route('companyUpdate') }}" id="sendform" enctype="multipart/form-data">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                                 <div class="card">
@@ -45,9 +45,9 @@
                                         <div class="col">
                                             <label for="">your position*</label>
                                             {{--                                            <input type="text" class="form-control" >--}}
-                                            <select class="form-control" id="exampleFormControlSelect1">
+                                            <select class="form-control" id="exampleFormControlSelect1" name="position_id">
                                                 @foreach($positions as $position)
-                                                    <option value="{{ $position->id }}" {{ (old('position_id')== $position->id ? "selected":"") }}>{{ $position->position_name }}</option>
+                                                    <option value="{{ $position->id }}" {{ ($companies->position_id== $position->id ? "selected":"") }}>{{ $position->position_name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -70,9 +70,9 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label for="exampleFormControlSelect1">country*</label>
-                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                <select class="form-control" id="exampleFormControlSelect1" name="country_id">
                                                     @foreach($countries as $country)
-                                                        <option value="{{ $country->id }}" {{ (old('country_id')== $country->id ? "selected":"") }}>{{ $country->name }}</option>
+                                                        <option value="{{ $country->id }}" {{ ($companies->country_id== $country->id ? "selected":"") }}>{{ $country->name }}</option>
 
                                                     @endforeach
                                                 </select>
@@ -90,9 +90,9 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label for="exampleFormControlSelect1">business sector*</label>
-                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                <select class="form-control" id="exampleFormControlSelect1" name="sector_id">
                                                     @foreach($sectors as $sector)
-                                                        <option value="{{ $sector->id }}" {{ (old('sector_id')== $sector->id ? "selected":"") }}>{{ $sector->business_name }}</option>
+                                                        <option value="{{ $sector->id }}" {{ ($companies->business_sector_id== $sector->id ? "selected":"") }}>{{ $sector->business_name }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -106,41 +106,47 @@
                                     <div class="row">
                                         <div class="col">
                                             <label for="">password*</label>
-                                            <input type="text" class="form-control" >
+                                            <input type="password" class="form-control" name="pass">
+                                            <small class="text-danger">{{ $errors->first('pass') }}</small>
                                         </div>
                                         <div class="col">
                                             <label for="">confirm password*</label>
-                                            <input type="text" class="form-control" >
+                                            <input type="password" class="form-control" name="cpass">
+                                            <small class="text-danger">{{ $errors->first('cpass') }}</small>
                                         </div>
                                     </div>
                                     <hr class="formhr">
                                     <div class="row">
                                         <div class="col"></div>
-                                        <div class="col"> <div id="background">
+                                        <div class="col">
+                                            <div id="background">
                                                 <div class="dropbox" data-tilt="true" data-tilt-scale="1.1">
                                                     <div class="icon-container tilt-logo-inner">
-                                                        <input id="probeUpload" type="file"/>
-
+                                                        <input id="probeUpload" type="file" name="myPhoto"/>
+                                                        <small class="text-danger">{{ $errors->first('myPhoto') }}</small>
                                                     </div>
                                                     <img id="probePreview" src=""/>
                                                 </div>
-                                            </div></div>
-                                        <div class="col text-center uploadtext"><p>upload your
-                                                company logo</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="col text-center uploadtext">
+                                            <p>
+                                                upload your company logo
+                                            </p>
+                                        </div>
                                     </div>
                                     <div class="col"></div>
                                 </div>
-                                <div class="row btns">
-                                    <div class="col text-center">
-                                        <button type="submit" class="btn btn-default chooseplan">Save Company</button>
-                                        <a href="{{route('dashboard.home')}}">
-                                            <button class="btn btn-default cancel">Cancel</button>
-                                        </a>
-                                    </div>
-                                </div>
-
                             </form>
 
+                        <div class="row btns">
+                            <div class="col text-center">
+                                <button class="btn btn-default chooseplan" onclick="event.preventDefault(); document.getElementById('sendform').submit();" >Save Company</button>
+                                <a href="{{route('dashboard.home')}}">
+                                    <button class="btn btn-default cancel">Cancel</button>
+                                </a>
+                            </div>
+                        </div>
 
                     </div>
 

@@ -54,7 +54,7 @@ class HomeController extends Controller
         $sectors = BusinessSector::all();
         $countries = Country::all();
         if ($info->status == 2) {
-//            return $info;
+//            return $companies;
             return view("dashboard-home" , compact('info', 'companies', 'positions', 'countries', 'sectors'));
         } else {
             return redirect('/');
@@ -83,7 +83,9 @@ class HomeController extends Controller
             'phone' => 'required',
             'website' =>'required',
             'cmail' =>'required',
-            'myPhoto' => ['required',Rule::dimensions()->maxWidth(140)->maxHeight(140)],
+            'pass' =>'required|min:6',
+            'cpass' =>'required|min:6|same:pass',
+            'myPhoto' => ['required',Rule::dimensions()->maxWidth(645)->maxHeight(645)],
 //            'mission' => 'required'
         ]);
         $user =User::where('id',Auth::id())->first();

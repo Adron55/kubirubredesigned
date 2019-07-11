@@ -62,8 +62,7 @@
                         <li><a href="#">Something</a></li>
                         <li class="divider"></li>
                         <li>
-                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 Log Out
                             </a>
                         </li>
