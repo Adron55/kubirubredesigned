@@ -37,8 +37,8 @@ class MainController extends Controller
             }
         }
         $validator = Validator::make($request->all(), [
-            'fname' => 'required|min:3',
-            'sname' => 'required',
+            'fullname' => 'required|min:6',
+//            'sname' => 'required',
             'mail' => 'required|email',
             'city' => 'required',
             'cname' => 'required',
@@ -46,17 +46,15 @@ class MainController extends Controller
             'phone' => 'required',
             'pass' => 'required|min:6',
             'cpass' => 'required|min:6|same:pass',
-            'photo' => 'required',
-            'mission' => 'required'
+            'myPhoto' => 'required',
+//            'mission' => 'required'
         ]);
 
-        $validator->after(function ($validator) use ($check_mail) {
-            if ($check_mail) {
-                $validator->errors()->add('companyMail', "You must use company mail");
-            }
-        });
-
-
+//        $validator->after(function ($validator) use ($check_mail) {
+//            if ($check_mail) {
+//                $validator->errors()->add('companyMail', "You must use company mail");
+//            }
+//        });
         if ($validator->fails()) {
             return redirect('company/registration')
                 ->withErrors($validator)
@@ -66,8 +64,7 @@ class MainController extends Controller
 
         $user = User::create([
             'email' => $request->mail,
-            'firstname' => $request->fname,
-            'lastname' => $request->sname,
+            'fullname' => $request->fullname,
             'phone' => $request->phone,
             'status' => 2,
             'password' => bcrypt($request->pass)
@@ -97,7 +94,7 @@ class MainController extends Controller
             'business_sector_id' => $request->sector_id
         ]);
         $messageOrder="Registration successful ";
-        Mail::to($request->mail)->send(new RegisterSendMail((string)$messageOrder));
+//        Mail::to($request->mail)->send(new RegisterSendMail((string)$messageOrder));
         return view('success');
 
         //return redirect('/');
