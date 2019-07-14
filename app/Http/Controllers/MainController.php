@@ -42,7 +42,7 @@ class MainController extends Controller
             'mail' => 'required|email',
             'city' => 'required',
             'cname' => 'required',
-            'pname' => 'required',
+//            'pname' => 'required',
             'phone' => 'required',
             'pass' => 'required|min:6',
             'cpass' => 'required|min:6|same:pass',
@@ -89,13 +89,15 @@ class MainController extends Controller
             'country_id' => $request->country_id,
             'city' => $request->city,
             'position_id' => $request->position_id,
-            'mission' => $request->mission,
-            'product' => $request->pname,
-            'business_sector_id' => $request->sector_id
+//            'mission' => $request->mission,
+//            'product' => $request->pname,
+            'business_sector_id' => $request->sector_id,
+            'company_mail' => $request->cmail,
+            'website' => $request->website
         ]);
         $messageOrder="Registration successful ";
 //        Mail::to($request->mail)->send(new RegisterSendMail((string)$messageOrder));
-        return view('success');
+        return redirect('success');
 
         //return redirect('/');
     }

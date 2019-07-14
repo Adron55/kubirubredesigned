@@ -31,6 +31,9 @@ Route::get('/howto', function () {
 Route::get('/team', function () {
     return view('team');
 })->name('team');
+Route::get('/success', function () {
+    return view('success');
+})->name('success');
 
 //Company
 Route::get('/dashboard/home','HomeController@dashhome')->name('dashboard.home');
