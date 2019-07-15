@@ -46,7 +46,7 @@ class MainController extends Controller
             'phone' => 'required',
             'pass' => 'required|min:6',
             'cpass' => 'required|min:6|same:pass',
-            'myPhoto' => 'required',
+            'photo' => 'required'
 //            'mission' => 'required'
         ]);
 
@@ -76,6 +76,7 @@ class MainController extends Controller
         //
 
         if (!is_null($request->file('photo'))) {
+//            return 'okey';
             $extension = $request->file('photo')->extension();
 
             $request->file('photo')->storeAs('public/logos', $user->id . '_image.' . $extension);

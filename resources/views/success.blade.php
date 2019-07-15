@@ -24,7 +24,9 @@
                                 <img class="loginpage" src="{{asset('dj/img/loginpage.svg')}}" alt="">
                             </a>
                         </div>
-                        <div class="col"><img class="boy" src="{{asset('dj/img/congrats.svg')}}" alt=""></div>
+                        <div class="col">
+                            <img class="boy" src="{{asset('dj/img/congrats.svg')}}" alt="">
+                        </div>
                     </div>
                 </div>
 

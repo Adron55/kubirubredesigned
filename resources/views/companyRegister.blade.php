@@ -17,7 +17,7 @@
                             <h3 class="text-center">Company Registration</h3>
                             <div class="card">
 
-                                <form class="reg" method="POST" id="sendform" action="{{route('companySave')}}">
+                                <form class="reg" method="POST" id="sendform" action="{{route('companySave')}}" enctype="multipart/form-data">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <div class="row">
                                         <div class="col">
@@ -120,8 +120,8 @@
                                         <div class="col"> <div id="background">
                                                 <div class="dropbox" data-tilt="true" data-tilt-scale="1.1">
                                                     <div class="icon-container tilt-logo-inner">
-                                                        <input id="probeUpload" type="file" name="myPhoto"/>
-                                                        <small class="text-danger">{{ $errors->first('myPhoto') }}</small>
+                                                        <input id="probeUpload" type="file" name="photo"/>
+                                                        <small class="text-danger">{{ $errors->first('photo') }}</small>
                                                     </div>
                                                     <img id="probePreview" src=""/>
                                                 </div>
