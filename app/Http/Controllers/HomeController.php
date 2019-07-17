@@ -79,13 +79,13 @@ class HomeController extends Controller
             'mail' =>'required|email',
             'city' =>'required',
             'cname' =>'required',
-            'pname' => 'required',
+//            'pname' => 'required',
             'phone' => 'required',
             'website' =>'required',
             'cmail' =>'required',
             'pass' =>'required|min:6',
             'cpass' =>'required|min:6|same:pass',
-            'myPhoto' => ['required',Rule::dimensions()->maxWidth(645)->maxHeight(645)],
+            'myPhoto' => [Rule::dimensions()->maxWidth(645)->maxHeight(645)],
 //            'mission' => 'required'
         ]);
         $user =User::where('id',Auth::id())->first();
@@ -94,12 +94,14 @@ class HomeController extends Controller
         $companies = CompanyInfo::where('user_id', $info->id)->update([
             'user_id' => $user->id,
             'company_name' => $request->cname,
-            'country_id' => $request->country_id-1,
+            'country_id' => $request->country_id,
             'city' => $request->city,
-            'position_id' => $request->position_id-1,
-            'mission' => $request->mission,
-            'product' => $request->pname,
-            'business_sector_id' => $request->sector_id-1
+            'position_id' => $request->position_id,
+            'company_mail' => $request->cmail,
+            'website' => $request->website,
+//            'mission' => $request->mission,
+//            'product' => $request->pname,
+            'business_sector_id' => $request->sector_id
         ]);
         if (!is_null($request->file('myPhoto'))) {
             $extension = $request->file('myPhoto')->extension();
@@ -110,8 +112,8 @@ class HomeController extends Controller
         }
 
         $info = User::where('uuid', $user->uuid)->update([
-            'firstname' => $request->fname,
-            'lastname' => $request->sname,
+            'fullname' => $request->fullname,
+//            'lastname' => $request->sname,
             'email' => $request->mail,
             'phone' => $request->phone,
 //            'path' => $request->myPhoto

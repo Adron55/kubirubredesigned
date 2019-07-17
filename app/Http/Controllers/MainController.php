@@ -46,7 +46,7 @@ class MainController extends Controller
             'phone' => 'required',
             'pass' => 'required|min:6',
             'cpass' => 'required|min:6|same:pass',
-            'photo' => 'required'
+            'photo' => ['required',Rule::dimensions()->maxWidth(645)->maxHeight(645)]
 //            'mission' => 'required'
         ]);
 
