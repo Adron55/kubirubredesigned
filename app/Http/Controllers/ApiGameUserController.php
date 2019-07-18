@@ -16,7 +16,7 @@ class ApiGameUserController extends Controller
             ->select('company_infos.company_name',
                 'users.path',
                 'users.id',
-                'company_infos.description',
+//                'company_infos.description',
                 'company_infos.website'
             )
             ->inRandomOrder()
