@@ -212,7 +212,7 @@ class ApiUserController extends Controller
                 'coupons.type', 'coupon_users.created_at', 'coupons.discount')
             ->orderBy('id', 'desc')
             ->where('coupon_users.status', '!=', 2)
-            ->get();
+            ->paginate(3);
         return $coupons;
         if (count($coupons) > 0) {
             return response()->json(['status' => 'success', 'coupons' => $coupons]);
