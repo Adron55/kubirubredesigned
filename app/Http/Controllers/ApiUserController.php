@@ -32,8 +32,9 @@ class ApiUserController extends Controller
         $validator = Validator::make($request->all(), [
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6',
-            'firstname' => 'required|min:3',
-            'lastname' => 'required|min:3',
+            'fullname' => 'required|min:6',
+//            'firstname' => 'required|min:3',
+//            'lastname' => 'required|min:3',
             'age' => 'required',
         ]);
 
@@ -43,8 +44,9 @@ class ApiUserController extends Controller
 
         $user = User::create([
             'email' => $request->email,
-            'firstname' => $request->firstname,
-            'lastname' => $request->lastname,
+            'fullname' => $request->fullname,
+//            'firstname' => $request->firstname,
+//            'lastname' => $request->lastname,
             'age' => $request->age,
             'password' => bcrypt($request->password)
         ]);
@@ -126,8 +128,9 @@ class ApiUserController extends Controller
         $user = User::where('uuid', $request->uuid)->first();
 
         $validator = Validator::make($request->all(), [
-            'firstname' => 'required|min:3',
-            'lastname' => 'required|min:4',
+            'fullname' => 'requierd|min:6',
+//            'firstname' => 'required|min:3',
+//            'lastname' => 'required|min:4',
             'email' => 'required|email|unique:users,email,' . $user->id,
             'age' => 'required',
         ]);
@@ -138,8 +141,9 @@ class ApiUserController extends Controller
 
 
         $info = User::where('uuid', $request->uuid)->update([
-            'firstname' => $request->firstname,
-            'lastname' => $request->lastname,
+            'fullname' => $request->fullname,
+//            'firstname' => $request->firstname,
+//            'lastname' => $request->lastname,
             'email' => $request->email,
             'age' => $request->age
         ]);
@@ -267,7 +271,7 @@ class ApiUserController extends Controller
 
     public function test(Request $request)
     {
-        $messageOrder = "Agilli ol hazirdi!!! sox icive  ";
+        $messageOrder = "Okey it is working  ";
         Mail::to("anarmemmedli55@gmail.com")->send(new RegisterSendMail((string)$messageOrder));
         return 1;
     }
