@@ -22,7 +22,7 @@
                 <a class="nav-link" href="{{route('howto')}}">How to</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('404page')}}">Privacy</a>
+                <a class="nav-link" href="{{route('privacy')}}">Privacy</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{route('support')}}">Contact</a>

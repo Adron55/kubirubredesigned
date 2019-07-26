@@ -34,11 +34,11 @@ Route::get('/team', function () {
 Route::get('/success', function () {
     return view('success');
 })->name('success');
-
+Route::get('/privacy', function () {
+    return view('privacy');
+})->name('privacy');
 //Company
 Route::get('/dashboard/home','HomeController@dashhome')->name('dashboard.home');
-
-
 Route::get('/', 'MainController@index')->name('/');
 Route::get('/contact', function (){
     return view('contact');
