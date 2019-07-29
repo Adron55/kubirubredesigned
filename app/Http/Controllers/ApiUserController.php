@@ -128,17 +128,13 @@ class ApiUserController extends Controller
         $user = User::where('uuid', $request->uuid)->first();
 
         $validator = Validator::make($request->all(), [
-            'fullname' => 'requierd|min:6',
-//            'firstname' => 'required|min:3',
-//            'lastname' => 'required|min:4',
+            'fullname' => 'required|min:6',
             'email' => 'required|email|unique:users,email,' . $user->id,
-            'age' => 'required',
+            'age' => 'required'
         ]);
-
         if ($validator->fails()) {
             return response()->json($validator->messages(), 200);
         }
-
 
         $info = User::where('uuid', $request->uuid)->update([
             'fullname' => $request->fullname,
