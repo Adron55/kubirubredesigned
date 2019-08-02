@@ -62,6 +62,23 @@ class HomeController extends Controller
 
 //        return view('home');
     }
+    public function dashdiscounts(Request $request)
+    {
+        $user =User::where('id',Auth::id())->first();
+        $info = User::where('uuid', $user->uuid)->first();
+        $companies = CompanyInfo::where('user_id', $info->id)->first();
+        $positions = Position::all();
+        $sectors = BusinessSector::all();
+        $countries = Country::all();
+        if ($info->status == 2) {
+//            return $companies;
+            return view("dashboard-discounts" , compact('info', 'companies', 'positions', 'countries', 'sectors'));
+        } else {
+            return redirect('/');
+        }
+
+//        return view('home');
+    }
 
 
     public function edit(User $user){

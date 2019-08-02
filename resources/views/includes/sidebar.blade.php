@@ -23,7 +23,7 @@
                 </a>
             </li>
             <li>
-                <a href="typography.html">
+                <a href="{{route('dashboard.discounts')}}">
                     <i class="pe-7s-news-paper"></i>
                     <p>Discounts</p>
                 </a>

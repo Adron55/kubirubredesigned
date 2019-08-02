@@ -103,11 +103,22 @@ class MainController extends Controller
         //return redirect('/');
     }
     public function sendcontact(Request $request){
+        $validator = Validator::make($request->all(), [
+            'firstname' => 'required|min:6',
+            'lastname' => 'required|min:6',
+            'email' => 'required|min:6',
+            'message' => 'required|min:6',
 
+        ]);
+        if ($validator->fails()) {
+            return redirect('support')
+                ->withErrors($validator)
+                ->withInput();
+        }
         $messageOrder=$request->all();
 //        return $messageOrder;
-        Mail::to('support@kubirub.online')->send(new ContactSendMail((array)$messageOrder));
-
+        Mail::to('support@kubirub.com')->send(new ContactSendMail((array)$messageOrder));
+        return redirect()->back()->with('message', 'Thank you for getting in touch!');
     }
     public function companyRegister()
     {

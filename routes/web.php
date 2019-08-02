@@ -39,6 +39,7 @@ Route::get('/privacy', function () {
 })->name('privacy');
 //Company
 Route::get('/dashboard/home','HomeController@dashhome')->name('dashboard.home');
+Route::get('/dashboard/discounts','HomeController@dashdiscounts')->name('dashboard.discounts');
 Route::get('/', 'MainController@index')->name('/');
 Route::get('/contact', function (){
     return view('contact');
