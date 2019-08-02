@@ -50,7 +50,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <p>
-                            {{$info->firstname}} {{$info->lastname}}
+                            {{$info->fullname}}
                             <b class="caret"></b>
                         </p>
                     </a>
