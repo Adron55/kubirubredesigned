@@ -28,38 +28,38 @@
                     <p>Discounts</p>
                 </a>
             </li>
-            <li>
-                <a href="maps.html">
+            <li class="disabled">
+                <a>
                     <i class="pe-7s-map-marker"></i>
                     <p>Feedbacks</p>
                 </a>
             </li>
-            <li>
-                <a href="notifications.html">
+            <li class="disabled">
+                <a>
                     <i class="pe-7s-bell"></i>
                     <p>Customers</p>
                 </a>
             </li>
-            <li class="active-pro">
-                <a href="upgrade.html">
+            <li class="disabled">
+                <a>
                     <i class="pe-7s-rocket"></i>
                     <p>Chat Room</p>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="disabled">
+                <a >
                     <i class="pe-7s-note2"></i>
                     <p>Calendar</p>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="disabled">
+                <a >
                     <i class="pe-7s-note2"></i>
                     <p>Help Center</p>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="disabled">
+                <a >
                     <i class="pe-7s-note2"></i>
                     <p>Settings</p>
                 </a>
@@ -67,3 +67,13 @@
         </ul>
     </div>
 </div>
+<style type="text/css">
+    .btn-disable
+    {
+        cursor: not-allowed;
+        pointer-events: none;
+
+        /*Button disabled - CSS color class*/
+        color: #c0c0c0;
+    }
+</style>
