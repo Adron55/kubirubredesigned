@@ -16,9 +16,9 @@
                     <p>Home</p>
                 </a>
             </li>
-            <li>
-                <a href="table.html">
-                    <i class="pe-7s-note2"></i>
+            <li class="disabled">
+                <a>
+                    <i class="pe-7s-mail"></i>
                     <p>Inbox</p>
                 </a>
             </li>
@@ -52,15 +52,15 @@
                     <p>Calendar</p>
                 </a>
             </li>
-            <li class="disabled">
-                <a >
-                    <i class="pe-7s-note2"></i>
+            <li >
+                <a href="{{route('support')}}">
+                    <i class="pe-7s-headphones"></i>
                     <p>Help Center</p>
                 </a>
             </li>
             <li class="disabled">
                 <a >
-                    <i class="pe-7s-note2"></i>
+                    <i class="pe-7s-settings"></i>
                     <p>Settings</p>
                 </a>
             </li>
