@@ -221,9 +221,20 @@ class ApiUserController extends Controller
         }
     }
     public function sendFeedback(Request $request){
+
+
+        $validator = Validator::make($request->all(), [
+            'uuid' => 'required',
+            'company_id'=>'required',
+            'message' => 'required|max:250|min:20'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->messages(), 200);
+        }
+
         $uuid = $request->uuid;
         $user= User::where('uuid', $uuid)->first();
-
 
         if ($user){
             DB::table('company_feedbacks')->insert([
