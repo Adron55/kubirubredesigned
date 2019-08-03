@@ -7,7 +7,7 @@
 @stop
 
     @section('nav')
-        <section class="about">
+        <section class="about different">
             <div class="container-fluid">
     @include('includes/header')
                 <p class="abouttext text-center">“KubiRub” is a 3D mobile game which has been created by the startup company Teching. Even though at first glance it looks like the general idea is just online version of the traditional Rubik’s Cube hand toy, but indeed it has a lot of different features which will make you addicted to this game. In this version of Rubik’s Cube it holds logos of companies on its sides rather than colors and getting just one side of the Rubik’s Cube completed is enough to make players gain coupons and discounts from the choosen company. The companies will be able to manage all information about coupons, their activity status, sale strategies of the company’s mobile gaming platform, brand or product promotion.

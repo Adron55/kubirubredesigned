@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="content ">
                                     <div class="container-fluid bg-light py-3">
-                                        <form id="contact-form" method="post" action="contact.php" role="form">
+                                        <form id="contact-form" method="post" action="{{route('')}}" role="form">
                                             <div class="messages"></div>
                                             <div class="controls">
                                                 <div class="row">
@@ -56,19 +56,18 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="labelname" for="exampleFormControlSelect1">Select Your Country</label>
-                                                        <select class="form-control" id="exampleFormControlSelect1">
-                                                            <option>Country</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                            <option>5</option>
+                                                        <select class="form-control" id="exampleFormControlSelect1" name="country">
+                                                            @foreach($countries as $country)
+                                                                <option value="{{ $country->id }}" {{ (old('country_id')== $country->id ? "selected":"") }}>{{ $country->name }}</option>
+
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="labelname" for="form_phone">Amount</label>
-                                                        <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Etc. 3">
+                                                        <input id="form_phone" type="tel" name="amount" class="form-control" placeholder="Etc. 3">
                                                         <div class="help-block with-errors"></div>
                                                     </div>
                                                 </div>
@@ -76,13 +75,7 @@
                                             <div class="row">
                                                 <div class="form-group col-md-6">
                                                     <label class="labelname" for="exampleFormControlSelect1">City</label>
-                                                    <select class="form-control" id="exampleFormControlSelect1">
-                                                        <option>Select Your City</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                    </select>
+                                                    <input class="form-control" id="exampleFormControlSelect1" name="city">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
