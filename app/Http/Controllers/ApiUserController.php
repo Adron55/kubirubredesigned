@@ -251,7 +251,7 @@ class ApiUserController extends Controller
             ->leftJoin('coupons', 'coupons.id', '=', 'coupon_users.coupon_id')
             ->leftJoin('company_infos', 'company_infos.user_id', '=', 'coupons.company_id')
             ->where('coupon_users.user_id', $user_id)
-            ->select('coupons.product', 'company_infos.company_name as name', 'coupon_users.id',
+            ->select('coupons.product', 'company_infos.id as company_id','company_infos.company_name as name', 'coupon_users.id',
                 'coupons.type', 'coupon_users.created_at', 'coupons.discount')
             ->orderBy('id', 'desc')
             ->where('coupon_users.status', 2)
