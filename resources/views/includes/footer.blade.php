@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row footrow text-left">
         <div class="col">
-            <img class="footimg" src="{{asset('dj/img/footerimg.svg')}}" alt="">
+            <img class="footimg" src="{{asset('dj/img/logo-footer.png')}}" alt="">
         </div>
         <div class="col">
             <p  class="h">COMPANY</p>

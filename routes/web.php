@@ -34,7 +34,7 @@ Route::get('/team', function () {
 Route::get('/success', function () {
     return view('success');
 })->name('success');
-Route::get('/privacy', function () {
+Route::get('/privacy-policy', function () {
     return view('privacy');
 })->name('privacy');
 //Company
