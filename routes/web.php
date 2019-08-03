@@ -92,6 +92,7 @@ Route::group(['prefix' => 'api/'], function () {
     Route::post('resetPasswordApp', 'ApiUserController@resetPasswordApp')->name('resetPasswordApp');
     Route::post('resetTokenApp', 'ApiUserController@resetTokenApp')->name('resetTokenApp');
     Route::post('doYouForgetMePost', 'ApiUserController@doYouForgetMe')->name('doYouForgetMePost');
+    Route::post('sendCompanyFeedback', 'ApiUserController@sendFeedback')->name('sendFeedback');
 });
 
 Route::group(['prefix' => 'company/api/'], function () {

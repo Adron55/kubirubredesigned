@@ -220,6 +220,22 @@ class ApiUserController extends Controller
             return response()->json(['status' => 'fail'], 401);
         }
     }
+    public function sendFeedback(Request $request){
+        $uuid = $request->uuid;
+        $user= User::where('uuid', $uuid)->first();
+
+
+        if ($user){
+            DB::table('company_feedbacks')->insert([
+                'user_id'=>$user->id,
+                'company_id'=>$request->company_id,
+                'message'=>$request->message,
+            ]);
+            return response()->json(['status' => 'success']);
+        } else {
+            return response()->json(['status' => 'fail'], 401);
+        }
+    }
     public function  getCompany(Request $request){
         $uuid = $request->uuid;
         $user_id = User::where('uuid', $uuid)->first()->id;
