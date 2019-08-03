@@ -24,9 +24,9 @@
         </div>
         <div class="col">
             <p class="h">CONTACT</p>
-            <span></span><p>+994 55 753 1935</p>
-            <span></span><p>support@kubirub.com</p>
-            <span></span><p>Azadlig ave. 20, Baku,Azerbaijan</p>
+            <span></span><p><span class="footicon pe-7s-call"></span>+994 55 753 1935</p>
+            <span></span><p><span class="footicon pe-7s-mail"></span>support@kubirub.com</p>
+            <span ></span><p><span class="footicon pe-7s-map-marker"></span>Azadlig ave. 20, Baku,Azerbaijan</p>
         </div>
     </div>
     <div class="send text-center">
@@ -41,13 +41,26 @@
         <div class="col copyright"><img src="{{asset('dj/img/copyright.svg')}}" alt="">Copyright 2019 Teching</div>
         <div class="col">
             <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
+            <a href="{{route('privacy')}}">
+                <p>Privacy Policy</p>
+            </a>
         </div>
-        <div class="col social">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-youtube-play" aria-hidden="true"></i>
-            <i class="fa fa-facebook" aria-hidden="true"></i>
+        <div class="col socialfoot">
+            <a href="https://www.instagram.com/kubirub.game/">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/kubirub_game">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCxlZSX2qL9W9Jqg9jGSi-6w">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/kubirub.game/">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/kubirub.game/">
+                <i class="fa fa-angellist" aria-hidden="true"></i>
+            </a>
         </div>
     </div>
 </div>

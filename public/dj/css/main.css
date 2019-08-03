@@ -524,7 +524,10 @@ margin-top: 10px;
             display: block;
           }
           
-
+.footicon{
+    font-weight: bold;
+    margin-right: 10px;
+}
 
           .news{
             background-image: url("backgrounds/newsbackground.png");
@@ -644,7 +647,7 @@ margin-top: 10px;
             padding-right: 17px!important;
             padding-left: 17px!important;
           }
-          .social{
+          .socialfoot{
             margin-left: 117px;
             margin-bottom: 20px;
             margin-top: -15px;
@@ -1299,7 +1302,7 @@ input[type="checkbox"] {
         font-family: "Proxima Nova";
         font-weight: bold;
         color: white;
-        margin-top: 15px;
+        margin-top: 10px;
     }
     .store img {
         width: 179px;
@@ -1521,7 +1524,23 @@ input[type="checkbox"] {
     }
 
 @media(max-width:1500px){
- 
+    .foot p {
+        display: inline;
+        margin-left: 15px;
+        color: #003CDB;
+        font-family: "Rubik Medium";
+        font-weight: 600;
+    }
+    .socialfoot {
+        margin-left: -25px;
+        margin-bottom: 20px;
+        margin-top: -15px;
+    }
+    .modal-content {
+        width: 67em;
+        margin-left: -382px;
+        margin-top: 35px;
+    }
     span.icon-play {
         top: 345px;
         left: 260px;
@@ -1551,8 +1570,8 @@ input[type="checkbox"] {
         margin-top: 10px;
     }
     .card h1 {
-        margin-top: -47px;
-        font-size: 30px;
+        margin-top: -44px;
+        font-size: 26px;
         margin-bottom: 69px;
         color: white;
     }
@@ -1621,7 +1640,7 @@ input[type="checkbox"] {
         font-family: "Rubik Medium";
     }
     .navbar-nav li {
-        font-size: 19px;
+        font-size: 18px;
         margin-right: 34px;
     }
     form .new{
@@ -1710,6 +1729,13 @@ input[type="checkbox"] {
     }
 }
 @media(max-width:1366px){
+    .vertical1 {
+        border: none;
+        border-left: 2px solid white;
+        height: 130px;
+        width: 3px;
+        display: inline;
+    }
     .signcontainer {
         margin-top: -20px;
     }
@@ -1872,9 +1898,8 @@ input[type="checkbox"] {
         width: 232px;
         margin-top: -7px;
     }
-    .social {
-        margin-left: 23px;
-   
+    .socialfoot {
+        margin-left: -90px;
         margin-bottom: 20px;
         margin-top: -15px;
     }
@@ -1895,7 +1920,7 @@ input[type="checkbox"] {
         font-size: 15px;
     }
     .navbar-nav li {
-        font-size: 19px;
+        font-size: 17px;
         margin-right: 23px;
     }
     .navbar-nav {
@@ -1913,7 +1938,7 @@ input[type="checkbox"] {
         width: 1354px;
     }
     .different .nav-item {
-        font-size: 19px;
+        font-size: 18px;
         margin-right: -6px;
     }
     .price {
@@ -1924,12 +1949,21 @@ input[type="checkbox"] {
     }
 }
 @media(max-width:1280px){
-
-    .navbar-nav li {
+    .card h1 {
+        margin-top: -36px;
         font-size: 19px;
+        margin-bottom: 40px;
+        color: white;
+    }
+    .navbar-nav li {
+        font-size: 17px;
         margin-right: 8px;
     }
-   
+    .modal-content {
+        width: 1206px;
+        margin-left: -324px;
+        margin-top: 35px;
+    }
     .add {
         margin-top: 213px;
         margin-bottom: 39px;

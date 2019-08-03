@@ -11,3 +11,4 @@
 <link rel="stylesheet" href="{{asset('dj/bootstrap/css/bootstrap.min.css')}}">
 <link rel="stylesheet" type="text/css"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+<link href="{{asset('dj-dash/css/pe-icon-7-stroke.css')}}" rel="stylesheet" />
