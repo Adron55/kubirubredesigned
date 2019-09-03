@@ -538,5 +538,25 @@ class ApiUserController extends Controller
         return "It is okey maan";
     }
 
+    public function checkUUID(Request $request){
+
+        $validator = Validator::make($request->all(), [
+            'uuid' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->messages(), 401);
+        }
+
+        $uuid = $request->uuid;
+        $user= User::where('uuid', $uuid)->first();
+
+        if ($user){
+            return response()->json(['status' => 'success']);
+        } else {
+            return response()->json(['status' => 'fail'], 401);
+        }
+    }
+
 
 }

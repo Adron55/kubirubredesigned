@@ -93,6 +93,7 @@ Route::group(['prefix' => 'api/'], function () {
     Route::post('resetTokenApp', 'ApiUserController@resetTokenApp')->name('resetTokenApp');
     Route::post('doYouForgetMePost', 'ApiUserController@doYouForgetMe')->name('doYouForgetMePost');
     Route::post('sendCompanyFeedback', 'ApiUserController@sendFeedback')->name('sendFeedback');
+    Route::post('check_uuid', 'ApiUserController@checkUUID');
 });
 
 Route::group(['prefix' => 'company/api/'], function () {
